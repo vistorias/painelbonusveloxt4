@@ -1,0 +1,41 @@
+{
+  "OUTUBRO": {
+    "financeiro": true,
+    "qualidade": true,
+    "organizacao_da_loja": true,
+    "Liderança & Organização": true,
+    "producao_por_cidade": {
+      "SÃO LUIS": true,
+      "IMPERATRIZ": true,
+      "PEDREIRAS": true,
+      "GRAJAÚ": true,
+      "ESTREITO": true
+    }
+  },
+  "NOVEMBRO": {
+    "financeiro": true,
+    "qualidade": true,
+    "organizacao_da_loja": true,
+    "Liderança & Organização": true,
+    "producao_por_cidade": {
+      "SÃO LUIS": true,
+      "IMPERATRIZ": false,
+      "PEDREIRAS": false,
+      "GRAJAÚ": true,
+      "ESTREITO": false
+    }
+  },
+  "DEZEMBRO": {
+    "financeiro": true,
+    "qualidade": true,
+    "organizacao_da_loja": true,
+    "Liderança & Organização": true,
+    "producao_por_cidade": {
+      "SÃO LUIS": true,
+      "IMPERATRIZ": true,
+      "PEDREIRAS": true,
+      "GRAJAÚ": true,
+      "ESTREITO": true
+    }
+  }
+}
