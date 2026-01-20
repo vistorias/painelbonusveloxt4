@@ -99,15 +99,15 @@ def ler_planilha(mes: str) -> pd.DataFrame:
 
 # ===================== REGRAS =====================
 # NOVA REGRA: limites em percentual (fração)
-# 3,5% -> 0.035 | 1,5% -> 0.015
-LIMITE_TOTAL = 0.035
-LIMITE_GRAVES = 0.015
+# 5% -> 0.05 | 2% -> 0.02
+LIMITE_TOTAL = 0.05
+LIMITE_GRAVES = 0.02
 
 def pct_qualidade_vistoriador(erros_total_frac: float, erros_graves_frac: float) -> float:
     """
     Retorna fração 0.0, 0.5 ou 1.0 para o indicador 'Qualidade' do Vistoriador
     baseado em percentuais (frações):
-    - 1.0: <=3,5% totais e <=1,5% graves
+    - 1.0: <=5% totais e <=2% graves
     - 0.5: estoura apenas um dos limites
     - 0.0: estoura os dois limites
     """
@@ -405,6 +405,7 @@ for idx, row in dados_view.iterrows():
             st.caption(
                 f"🧪 Qualidade — erros totais: {fmt_pct(erros_total_pct)} | graves/gravíssimos: {fmt_pct(erros_gg_pct)}"
             )
+
 
 
 
