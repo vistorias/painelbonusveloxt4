@@ -13,7 +13,6 @@ DATA_DIR = BASE_DIR / "data"
 
 # ===================== HELPERS DE TEXTO =====================
 def norm_txt(s: str) -> str:
-    """UPPER + remove acentos + colapsa espaços internos."""
     if s is None or (isinstance(s, float) and pd.isna(s)):
         return ""
     s = str(s).strip().upper()
@@ -22,6 +21,9 @@ def norm_txt(s: str) -> str:
     s = re.sub(r"\s+", " ", s)
     return s
 
+def up(s):
+    return norm_txt(s)
+    
 def is_org_loja(item: str) -> bool:
     """Detecta 'Organização da Loja' com ou sem 5s/5S e variações."""
     k = norm_txt(item)
@@ -388,3 +390,4 @@ for idx, row in dados_view.iterrows():
             st.caption(
                 f"🧪 Qualidade — erros totais: {fmt_pct(erros_total_pct)} | graves/gravíssimos: {fmt_pct(erros_gg_pct)}"
             )
+
