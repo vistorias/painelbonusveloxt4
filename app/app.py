@@ -176,8 +176,8 @@ def calcula_mes(df_mes: pd.DataFrame, nome_mes: str) -> pd.DataFrame:
             if item.startswith("Produção"):
                 func_up = func
                 # Regra especial: supervisoras perdem somente pelas cidades sob sua responsabilidade
-                if func_up == "SUPERVISOR" and nome in SUPERVISORAS_CIDADES:
-                    cidades_resp = SUPERVISORAS_CIDADES[nome]
+                if func_up == "SUPERVISOR" and nome in SUPERVISORES_CIDADES:
+                    cidades_resp = SUPERVISORES_CIDADES[nome]
                     base_soma = sum(cidades_resp.values()) or 1.0
                     perda_total = 0.0
                     perdas_cidades = []
@@ -405,6 +405,7 @@ for idx, row in dados_view.iterrows():
             st.caption(
                 f"🧪 Qualidade — erros totais: {fmt_pct(erros_total_pct)} | graves/gravíssimos: {fmt_pct(erros_gg_pct)}"
             )
+
 
 
 
