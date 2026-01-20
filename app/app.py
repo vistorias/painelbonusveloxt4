@@ -46,6 +46,15 @@ def int_safe(x):
     except Exception:
         return 0
 
+def pct_safe(x):
+    try:
+        x = float(x)
+        if x > 1:
+            return x / 100.0
+        return x
+    except Exception:
+        return 0.0
+
 # ===================== SUPERVISORES (produção 15%) =====================
 # Aryson -> SÃO LUÍS ; Lucas -> IMPERATRIZ
 _SUPERVISORES_CIDADES_RAW = {
@@ -390,4 +399,5 @@ for idx, row in dados_view.iterrows():
             st.caption(
                 f"🧪 Qualidade — erros totais: {fmt_pct(erros_total_pct)} | graves/gravíssimos: {fmt_pct(erros_gg_pct)}"
             )
+
 
